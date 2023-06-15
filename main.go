@@ -15,5 +15,7 @@ func main() {
 	}
 
 	fmt.Println(feedLines)
-	rss.FetchRss("https://lukesmith.xyz/index.xml")
+	for _, feed := range feedLines {
+		rss.FetchRss(feed)
+	}
 }
